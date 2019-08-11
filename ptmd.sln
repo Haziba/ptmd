@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19241EEF-EE7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleaseTakeMyDogBackend", "src\PleaseTakeMyDogBackend\PleaseTakeMyDogBackend.csproj", "{15F3A3C4-7391-45AE-A59F-7A582629260C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "e2e", "e2e", "{51D5F2CA-4928-4508-9A81-7BC05B2710E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleaseTakeMyDogBackend.IntegrationTests", "e2e\PleaseTakeMyDogBackend.IntegrationTests\PleaseTakeMyDogBackend.IntegrationTests.csproj", "{6F40ED57-1B67-4D63-BF8A-4A9C17491614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{15F3A3C4-7391-45AE-A59F-7A582629260C}.Release|x64.Build.0 = Release|Any CPU
 		{15F3A3C4-7391-45AE-A59F-7A582629260C}.Release|x86.ActiveCfg = Release|Any CPU
 		{15F3A3C4-7391-45AE-A59F-7A582629260C}.Release|x86.Build.0 = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|x64.Build.0 = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Debug|x86.Build.0 = Debug|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x64.ActiveCfg = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x64.Build.0 = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x86.ActiveCfg = Release|Any CPU
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{15F3A3C4-7391-45AE-A59F-7A582629260C} = {19241EEF-EE7C-47F0-AA6F-E78E79328E10}
+		{6F40ED57-1B67-4D63-BF8A-4A9C17491614} = {51D5F2CA-4928-4508-9A81-7BC05B2710E8}
 	EndGlobalSection
 EndGlobal

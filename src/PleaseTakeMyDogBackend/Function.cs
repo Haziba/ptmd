@@ -1,4 +1,5 @@
 using Amazon.Lambda.Core;
+using Amazon.Lambda.APIGatewayEvents;
 using Kralizek.Lambda;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace PleaseTakeMyDogBackend
 {
-    public class Function : RequestResponseFunction<string, string>
+    public class Function : RequestResponseFunction<APIGatewayProxyRequest, APIGatewayProxyResponse>
     {
         protected override void Configure(IConfigurationBuilder builder)
         {

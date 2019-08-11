@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+
+  localstack:
+    image: localstack/localstack:0.8.10
+    ports:
+      - "4583:4583" # SSM
+      - "3020:8080"
+    environment:
+      - SERVICES=${SERVICES-ssm}
+      - DEBUG=${DEBUG- }
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEFAULT_REGION=eu-west-1
+    restart: unless-stopped

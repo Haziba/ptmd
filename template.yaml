@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Please Take My Dog
+
+Parameters:
+  PolicyStackNameParameter:
+    Type: String
+    Default: ptmd-iam
+    Description: The name of the stack that declares this stacks IAM policy ARNs
+
+Resources:
+  Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionBody:
+        info:
+          title: !Ref AWS::StackName
+        paths:
+          /{proxy+}:
+            x-amazon-apigateway-any-method:
+              x-amazon-apigateway-integration:
+                uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ApiFunction.Alias}/invocations"
+                passthroughBehavior: "when_no_match"
+                httpMethod: "POST"
+                type: "aws_proxy"
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: publish/PleaseTakeMyDogBackend
+      Handler: PleaseTakeMyDogBackend::PleaseTakeMyDogBackend.Function::FunctionHandlerAsync
+      Runtime: dotnetcore2.1
+      Timeout: 30
+      Environment:
+        Variables:
+          ENVIRONMENT: ""
+      MemorySize: 512
+      Role:
+        Fn::ImportValue:
+          !Sub "${PolicyStackNameParameter}-ApiFunctionRoleArn"
+      Events:
+        Everything:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+            RestApiId: !Ref Api

@@ -1,12 +1,14 @@
 using System;
 using System.Threading.Tasks;
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using Kralizek.Lambda;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace PleaseTakeMyDogBackend
 {
-    public class ToUpperStringRequestResponseHandler : IRequestResponseHandler<string, string>
+    public class ToUpperStringRequestResponseHandler : IRequestResponseHandler<APIGatewayProxyRequest, APIGatewayProxyResponse>
     {
         private readonly ILogger<ToUpperStringRequestResponseHandler> _logger;
 
@@ -19,9 +21,9 @@ namespace PleaseTakeMyDogBackend
             _logger = logger;
         }
 
-        public async Task<string> HandleAsync(string input, ILambdaContext context)
+        public Task<APIGatewayProxyResponse> HandleAsync(APIGatewayProxyRequest input, ILambdaContext context)
         {
-            return input?.ToUpper();
+            return Task.FromResult(new APIGatewayProxyResponse { Body = input.Body.ToUpper() });
         }
     }
 }
