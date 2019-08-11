@@ -48,15 +48,5 @@ workflows:
     jobs:
       - test-and-package
       - deploy:
-          name: deploy-dev
-          context: aws-cf-deployment-dev
           requires:
             - test-and-package
-      - deploy:
-          name: deploy-prod
-          context: aws-cf-deployment-prod
-          requires:
-            - test-and-package
-          filters:
-            branches:
-              only: master
