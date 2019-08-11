@@ -5,11 +5,15 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19241EEF-EE7C-47F0-AA6F-E78E79328E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleaseTakeMyDogBackend", "src\PleaseTakeMyDogBackend\PleaseTakeMyDogBackend.csproj", "{15F3A3C4-7391-45AE-A59F-7A582629260C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PleaseTakeMyDogBackend", "src\PleaseTakeMyDogBackend\PleaseTakeMyDogBackend.csproj", "{15F3A3C4-7391-45AE-A59F-7A582629260C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "e2e", "e2e", "{51D5F2CA-4928-4508-9A81-7BC05B2710E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleaseTakeMyDogBackend.IntegrationTests", "e2e\PleaseTakeMyDogBackend.IntegrationTests\PleaseTakeMyDogBackend.IntegrationTests.csproj", "{6F40ED57-1B67-4D63-BF8A-4A9C17491614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PleaseTakeMyDogBackend.IntegrationTests", "e2e\PleaseTakeMyDogBackend.IntegrationTests\PleaseTakeMyDogBackend.IntegrationTests.csproj", "{6F40ED57-1B67-4D63-BF8A-4A9C17491614}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{11EC64F5-AD51-4E1B-9450-93D614C23B50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PleaseTakeMyDogBackend.Tests", "test\PleaseTakeMyDogBackend.Tests\PleaseTakeMyDogBackend.Tests.csproj", "{62E26129-9538-488D-A692-3EF8308E34DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{15F3A3C4-7391-45AE-A59F-7A582629260C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,9 +49,28 @@ Global
 		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x64.Build.0 = Release|Any CPU
 		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F40ED57-1B67-4D63-BF8A-4A9C17491614}.Release|x86.Build.0 = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|x64.Build.0 = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Debug|x86.Build.0 = Debug|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|x64.ActiveCfg = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|x64.Build.0 = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{62E26129-9538-488D-A692-3EF8308E34DB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{15F3A3C4-7391-45AE-A59F-7A582629260C} = {19241EEF-EE7C-47F0-AA6F-E78E79328E10}
 		{6F40ED57-1B67-4D63-BF8A-4A9C17491614} = {51D5F2CA-4928-4508-9A81-7BC05B2710E8}
+		{62E26129-9538-488D-A692-3EF8308E34DB} = {11EC64F5-AD51-4E1B-9450-93D614C23B50}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99F3E531-ADEC-4792-9A53-CC9A68C44522}
 	EndGlobalSection
 EndGlobal
